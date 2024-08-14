@@ -1,4 +1,4 @@
-package day01.train;
+package day01.StudentTrain;
 
 public class score {
     public static void main(String[] args) {

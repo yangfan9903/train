@@ -1,4 +1,4 @@
-package day01.train;
+package day01.StudentTrain;
 
 public class Student {
     private String name;
