@@ -7,13 +7,14 @@ import java.util.Random;
 public class Landlords {
     public static void main(String[] args) {
         String[] name = {"1","2","3","4","5","6","7","8","9","10","J","Q","K","A"};
+        // 准备四种花色
+        String[] color = {"♥","♦","♣","♠"};
         ArrayList<String> cards = new ArrayList<>();
         ArrayList<String> newcards = new ArrayList<>();
         for (String s : name) {
-            cards.add(s+"a");
-            cards.add(s+"b");
-            cards.add(s+"c");
-            cards.add(s+"d");
+            for (int i = 0; i < color.length; i++) {
+                cards.add(s+color[i]);
+            }
         }
         cards.add("queen1");
         cards.add("queen2");
