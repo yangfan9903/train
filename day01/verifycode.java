@@ -17,18 +17,18 @@ public class verifycode {
             }
             System.out.println("请输入要生成的验证码位数");
             int num = sc.nextInt();
-            String code = "";
+            StringBuilder code = new StringBuilder();
             for (int i = 0; i < num; i++) {
                 int randomtype = random.nextInt(3);
                 switch (randomtype){
                     case 0:
-                        code = code + random.nextInt(10);
+                        code.append(random.nextInt(10));
                         break;
                     case 1:
-                        code = code + getRandomBigLetter();
+                        code.append(getRandomBigLetter());
                         break;
                     case 2:
-                        code = code + getRandomSmallLetter();
+                        code.append(getRandomSmallLetter());
                         break;
                 }
 
