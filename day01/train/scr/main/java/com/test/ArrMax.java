@@ -1,6 +1,6 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
-public class arrmax {
+public class ArrMax {
     public static void main(String[] args) {
         int[] arr = {1000,200,300,100,500,600,400,1200};
         System.out.println(getMax(arr));

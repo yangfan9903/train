@@ -1,9 +1,9 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class guessNumber {
+public class GuessNumber {
     public static void main(String[] args) {
         //生成1-100的随机整数
         System.out.println("=====随机数游戏开始=====");

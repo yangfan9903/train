@@ -1,7 +1,6 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Landlords {

@@ -1,4 +1,4 @@
-package day01.MovieTrain;
+package day01.train.scr.main.java.com.test.MovieTrain;
 
 public class Movie {
     private int id;

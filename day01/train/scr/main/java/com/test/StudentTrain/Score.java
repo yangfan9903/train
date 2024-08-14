@@ -1,6 +1,6 @@
-package day01.StudentTrain;
+package day01.train.scr.main.java.com.test.StudentTrain;
 
-public class score {
+public class Score {
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.setName("播妞");

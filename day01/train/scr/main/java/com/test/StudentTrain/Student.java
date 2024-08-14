@@ -1,4 +1,4 @@
-package day01.StudentTrain;
+package day01.train.scr.main.java.com.test.StudentTrain;
 
 public class Student {
     private String name;

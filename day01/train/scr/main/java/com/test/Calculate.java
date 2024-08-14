@@ -1,8 +1,8 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
 import java.util.Scanner;
 
-public class calculate {
+public class Calculate {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (true){

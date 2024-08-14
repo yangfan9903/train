@@ -1,10 +1,10 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class findPrimeNumber {
+public class FindPrimeNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("=====寻找质数程序启动=====");

@@ -1,9 +1,9 @@
-package day01;
+package day01.train.scr.main.java.com.test;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class verifycode {
+public class VerifyCode {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
