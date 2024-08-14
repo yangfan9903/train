@@ -1,4 +1,4 @@
-package main.java.com.test.train.MovieTrain;
+package com.test.train.MovieTrain;
 
 import java.util.ArrayList;
 import java.util.Scanner;

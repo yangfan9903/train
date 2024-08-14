@@ -1,4 +1,4 @@
-package main.java.com.test.train;
+package com.test.train;
 
 public class ArrMax {
     public static void main(String[] args) {

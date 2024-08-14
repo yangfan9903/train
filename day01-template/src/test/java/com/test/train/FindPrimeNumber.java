@@ -1,4 +1,4 @@
-package main.java.com.test.train;
+package com.test.train;
 
 import java.util.ArrayList;
 import java.util.List;

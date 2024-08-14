@@ -1,4 +1,4 @@
-package main.java.com.test.train.StudentTrain;
+package com.test.train.StudentTrain;
 
 public class Student {
     private String name;
