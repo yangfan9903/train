@@ -1,4 +1,4 @@
-package day01.train.scr.main.java.com.test.StudentTrain;
+package main.java.com.test.train.StudentTrain;
 
 public class Score {
     public static void main(String[] args) {

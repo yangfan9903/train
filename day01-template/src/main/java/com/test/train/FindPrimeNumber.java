@@ -1,4 +1,4 @@
-package day01.train.scr.main.java.com.test;
+package main.java.com.test.train;
 
 import java.util.ArrayList;
 import java.util.List;
