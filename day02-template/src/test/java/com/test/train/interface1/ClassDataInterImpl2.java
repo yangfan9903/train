@@ -24,8 +24,9 @@ public class ClassDataInterImpl2 implements ClassDataInfo {
 
     @Override
     public void printAverageScore() {
-        double maxscore = 0;
-        double minscore = 0;
+        Student s1 = students[0];
+        double maxscore = s1.getScore();
+        double minscore = s1.getScore();
         double sum = 0;
         for (Student student : students) {
             sum += student.getScore();
