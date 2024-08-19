@@ -3,5 +3,7 @@
      3.了解完基本的类的用法,熟悉反射如何使用? 
      4.集合如何排序,熟悉集合的常用方法
 
-1.
+1.将git.ignore目录移到根目录就可以完成整个工程的配置,全局配置可以使用git config --global core.excludesfile ~/.gitignore_global
+2.
+
 
