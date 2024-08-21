@@ -7,6 +7,7 @@ public class ExecutorServiceDemo1 {
         ExecutorService pool = new ThreadPoolExecutor(3,5,10, TimeUnit.SECONDS,new ArrayBlockingQueue<>(3),
                 Executors.defaultThreadFactory(),new ThreadPoolExecutor.AbortPolicy());
         Runnable target = new MyRunnable();
+        pool.execute(target);
 
     }
 }
