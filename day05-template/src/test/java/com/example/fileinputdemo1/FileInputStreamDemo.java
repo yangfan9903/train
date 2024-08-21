@@ -11,5 +11,6 @@ public class FileInputStreamDemo {
         while ((b = is.read()) != -1) {
             System.out.print((char) b);
         }
+        is.close();
     }
 }

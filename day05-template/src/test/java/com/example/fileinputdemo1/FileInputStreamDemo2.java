@@ -13,5 +13,6 @@ public class FileInputStreamDemo2 {
             String str = new String(buffer, 0, len);
             System.out.print(str);
         }
+        is.close();
     }
 }
