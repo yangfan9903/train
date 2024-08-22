@@ -9,10 +9,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="day05-template" />
         <module name="day02-template" />
-        <module name="day01-template" />
         <module name="day04-temlate" />
-        <module name="day03-template" />
         <module name="day06-template" />
+        <module name="day01-template" />
+        <module name="day03-template" />
+        <module name="day07-template" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

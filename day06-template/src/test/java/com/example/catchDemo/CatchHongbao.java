@@ -43,6 +43,7 @@ public class CatchHongbao extends Thread {
                     records.entrySet().stream().sorted(Map.Entry.comparingByValue(Comparator.reverseOrder())).forEach(System.out::println);
 
                     break;
+
                 }
             }
         }
