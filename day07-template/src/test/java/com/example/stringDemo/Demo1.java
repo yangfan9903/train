@@ -1,6 +1,6 @@
 package com.example.stringDemo;
 
-public class demo1 {
+public class Demo1 {
     public static void main(String[] args) {
         int a = myAtoi("312dasda1231");
         System.out.println(a);
