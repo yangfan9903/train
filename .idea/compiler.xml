@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="day08-template" />
         <module name="day05-template" />
+        <module name="day10-template" />
         <module name="day02-template" />
         <module name="day04-temlate" />
         <module name="day06-template" />
