@@ -15,6 +15,7 @@
         <module name="day06-template" />
         <module name="day01-template" />
         <module name="day03-template" />
+        <module name="day11-template" />
         <module name="day07-template" />
         <module name="day09-template" />
       </profile>
