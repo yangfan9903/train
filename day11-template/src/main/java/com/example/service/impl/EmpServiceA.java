@@ -5,11 +5,14 @@ import com.example.dao.impl.EmpDaoA;
 import com.example.pojo.Emp;
 import com.example.pojo.Result;
 import com.example.service.EmpService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
-
+@Component
 public class EmpServiceA implements EmpService {
-    private EmpDao empDao = new EmpDaoA();
+    @Autowired
+    private EmpDao empDao;
     @Override
     public List<Emp> listEmp() {
         List<Emp> empList =  empDao.listEmp();
@@ -17,7 +20,7 @@ public class EmpServiceA implements EmpService {
             if ("1".equals(s.getGender())){
                 s.setGender("男");
             }else {
-                s.setGender("女");
+                s.setGender("女121");
             }
             if ("1".equals(s.getJob())){
                 s.setJob("讲师");
