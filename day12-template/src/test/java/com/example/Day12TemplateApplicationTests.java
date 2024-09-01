@@ -79,7 +79,7 @@ class Day12TemplateApplicationTests {
     @Test
     public void testSelectConditionEmp(){
 //         List<Emp> list = empMapper.selectCondition("张",1,LocalDate.of(2010,1,1),LocalDate.of(2020,1,1));
-         List<Emp> list = empMapper.selectCondition("张",null,null,null);
+         List<Emp> list = empMapper.selectCondition("张",1,null,null);
          list.stream().forEach(System.out::println);
     }
 //    public void testListEmp(){
