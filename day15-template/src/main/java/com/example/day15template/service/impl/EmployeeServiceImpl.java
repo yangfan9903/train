@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
 
 import javax.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +27,13 @@ public class EmployeeServiceImpl extends ServiceImpl<EmployeeMapper, Employee> i
 
     @Autowired
     private JwtUtils jwtUtils;
+
+    /**
+     * 新增员工ijj
+     * @param emp
+     */
+
+
     @Override
     public R<Employee> login(HttpServletRequest request,Employee employee) {
         // 1.将密码进行反加密

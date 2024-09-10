@@ -2,8 +2,10 @@ package com.example.day15template.interceptor;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.example.day15template.common.BaseContext;
 import com.example.day15template.common.R;
 import com.example.day15template.utils.JwtUtils;
+import io.jsonwebtoken.Claims;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
@@ -18,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginCheckInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        log.info("=========线程id{}",Thread.currentThread().getId());
         String jwt = (String)request.getSession().getAttribute("employee");
         log.info(jwt);
         if (!StringUtils.hasLength(jwt)){
@@ -31,7 +34,7 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
             return false;// 为了不访问页面
         }
         try {
-            JwtUtils.parseJwt(jwt);
+            Claims claims = JwtUtils.parseJwt(jwt);
         } catch (Exception e) {
             e.printStackTrace();
             String msg = "NOTLOGIN";
