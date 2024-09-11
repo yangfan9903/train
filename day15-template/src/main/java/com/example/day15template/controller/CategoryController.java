@@ -14,6 +14,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -66,20 +68,28 @@ public class CategoryController {
     @PutMapping
     public R<String> update(HttpServletRequest request, @RequestBody Category category){
 
-        String jwt = (String)request.getSession().getAttribute("employee");
-        log.info(jwt);
-        try {
-            JwtUtils.parseJwt(jwt);
-//            log.info(claims.get("id").toString());
-
-        } catch (Exception e) {
-            return R.error("非法修改员工信息");
-        }
-        Claims claims = JwtUtils.parseJwt(jwt);
-        Long empId = Long.parseLong(claims.get("id").toString());
-//        employee.setUpdateUser(empId);
-        BaseContext.setCurrentId(empId);
+//        String jwt = (String)request.getSession().getAttribute("employee");
+//        log.info(jwt);
+//        try {
+//            JwtUtils.parseJwt(jwt);
+////            log.info(claims.get("id").toString());
+//
+//        } catch (Exception e) {
+//            return R.error("非法修改员工信息");
+//        }
+//        Claims claims = JwtUtils.parseJwt(jwt);
+//        Long empId = Long.parseLong(claims.get("id").toString());
+////        employee.setUpdateUser(empId);
+//        BaseContext.setCurrentId(empId);
         categoryService.updateById(category);
         return R.success("修改分类成功");
+    }
+    @GetMapping("/list")
+    public R<List<Category>> list(Category category){
+        LambdaQueryWrapper<Category> categoryLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        categoryLambdaQueryWrapper.eq(category.getType()!=null, Category::getType, category.getType());
+        categoryLambdaQueryWrapper.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
+        List<Category> categoryList = categoryService.list(categoryLambdaQueryWrapper);
+        return R.success(categoryList);
     }
 }

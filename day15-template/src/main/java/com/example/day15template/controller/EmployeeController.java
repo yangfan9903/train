@@ -47,18 +47,18 @@ public class EmployeeController {
         emp.setPassword(DigestUtils.md5DigestAsHex("123456".getBytes()));
 //        emp.setUpdateTime(LocalDateTime.now());
 //        emp.setCreateTime(LocalDateTime.now());
-        String jwt = (String)request.getSession().getAttribute("employee");
-        try {
-            JwtUtils.parseJwt(jwt);
-//            log.info(claims.get("id").toString());
-
-        } catch (Exception e) {
-            return R.error("非法修改员工信息");
-        }
-        Claims claims = JwtUtils.parseJwt(jwt);
-        Long empId = Long.parseLong(claims.get("id").toString());
-//        employee.setUpdateUser(empId);
-        BaseContext.setCurrentId(empId);
+//        String jwt = (String)request.getSession().getAttribute("employee");
+//        try {
+//            JwtUtils.parseJwt(jwt);
+////            log.info(claims.get("id").toString());
+//
+//        } catch (Exception e) {
+//            return R.error("非法修改员工信息");
+//        }
+//        Claims claims = JwtUtils.parseJwt(jwt);
+//        Long empId = Long.parseLong(claims.get("id").toString());
+////        employee.setUpdateUser(empId);
+//        BaseContext.setCurrentId(empId);
 //        Claims claims = JwtUtils.parseJwt(jwt);
 //        Long empId = Long.parseLong(claims.get("id").toString());
 ////            Long empId = (Long) claims.get("id");
@@ -101,19 +101,19 @@ public class EmployeeController {
     @PutMapping
     public R<String> update(HttpServletRequest request, @RequestBody Employee employee){
         log.info("=========线程id{}",Thread.currentThread().getId());
-        String jwt = (String)request.getSession().getAttribute("employee");
-        log.info(jwt);
-        try {
-            JwtUtils.parseJwt(jwt);
-//            log.info(claims.get("id").toString());
-
-        } catch (Exception e) {
-            return R.error("非法修改员工信息");
-        }
-        Claims claims = JwtUtils.parseJwt(jwt);
-        Long empId = Long.parseLong(claims.get("id").toString());
-//        employee.setUpdateUser(empId);
-        BaseContext.setCurrentId(empId);
+//        String jwt = (String)request.getSession().getAttribute("employee");
+//        log.info(jwt);
+//        try {
+//            JwtUtils.parseJwt(jwt);
+////            log.info(claims.get("id").toString());
+//
+//        } catch (Exception e) {
+//            return R.error("非法修改员工信息");
+//        }
+//        Claims claims = JwtUtils.parseJwt(jwt);
+//        Long empId = Long.parseLong(claims.get("id").toString());
+////        employee.setUpdateUser(empId);
+//        BaseContext.setCurrentId(empId);
 //        employee.setUpdateTime(LocalDateTime.now());
         employeeService.updateById(employee);
         return R.success("成功修改");
