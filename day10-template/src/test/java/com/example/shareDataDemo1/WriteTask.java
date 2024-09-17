@@ -11,6 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class WriteTask implements Runnable{
     private CopyOnWriteArrayList<Integer> list;
 
+
     @Override
     public void run() {
         for (int i = 10; i < 15; i++){

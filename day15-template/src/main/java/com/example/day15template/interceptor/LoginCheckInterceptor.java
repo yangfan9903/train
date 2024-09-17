@@ -20,10 +20,33 @@ import javax.servlet.http.HttpServletResponse;
 public class LoginCheckInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        log.info("=========线程id{}",Thread.currentThread().getId());
+//        log.info("=========线程id{}",Thread.currentThread().getId());
+        log.info("拦截到请求：{}",request.getRequestURI());
         String jwt = (String)request.getSession().getAttribute("employee");
         log.info(jwt);
         if (!StringUtils.hasLength(jwt)){
+            log.info("未登录，请登录");
+            String msg = "NOTLOGIN";
+            R error = R.error(msg);
+            System.out.println(error);
+            String notLogin = JSON.toJSONString(error);
+            log.info(notLogin);
+            response.getWriter().write(notLogin); // 为了前端跳转
+            return false;// 为了不访问页面
+        }
+        try {
+            Claims claims = JwtUtils.parseJwt(jwt);
+        } catch (Exception e) {
+            e.printStackTrace();
+            String msg = "NOTLOGIN";
+            R error = R.error(msg);
+            String notLogin = JSON.toJSONString(error);
+            response.getWriter().write(notLogin);
+            return false;
+        }
+        String jwt2 = (String)request.getSession().getAttribute("user");
+        log.info(jwt2);
+        if (!StringUtils.hasLength(jwt2)){
             log.info("未登录，请登录");
             String msg = "NOTLOGIN";
             R error = R.error(msg);
